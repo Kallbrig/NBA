@@ -9,4 +9,7 @@ A repository to keep my NBA data and a few projects.
 ## [Basic Player Ranking System](https://github.com/Kallbrig/NBA/tree/main/Basic%20Player%20Ranking%20System)
 + A fun ranking system for players.
 
+## [Weighted FG%](https://github.com/Kallbrig/NBA/tree/main/Weighted%20FG%25)
++ A new FG% that weights FG% using shots attempted. This allows a FG% to be a better measure of rather any given shot will go in.
+
 ---
