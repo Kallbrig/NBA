@@ -12,4 +12,10 @@ A repository to keep my NBA data and a few projects.
 ## [Weighted FG%](https://github.com/Kallbrig/NBA/tree/main/Weighted%20FG%25)
 + A new FG% that weights FG% using shots attempted. This allows a FG% to be a better measure of rather any given shot will go in.
 
+## [Combine Team Stats]()
++ Consolidates raw scraped team statsistics into a single csv for easier access.
+
+## [Combine Player And Team Stats]()
++ Adds team stats to player stats. So now Wins, Losses, etc can be taken into consideration when evaluating a player.
+
 ---
