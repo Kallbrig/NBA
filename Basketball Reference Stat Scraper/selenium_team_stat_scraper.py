@@ -5,7 +5,7 @@ from datetime import date
 import shutil
 
 
-# This code is disgusting, but it works for now.
+# This code makes me want to vomit, but it works for now.
 # I got tired of playing with bs4 and this is a quick and dirty workaround for that.
 
 
