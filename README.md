@@ -26,13 +26,14 @@ A repository to keep my NBA data and a few projects.
 
 ## To-do (No Order)
 + Scrape award voting/winners. (In Progress)
-+ Scrape Team Per Game, Advanced, and Shooting stats and consolidate them. 
++ ~~Scrape~~ Team Per Game, Advanced, and Shooting stats and consolidate them. 
 + The [Team Linear Regression Notebook](https://github.com/Kallbrig/NBA/blob/main/ML%20-%20Team/team_linear_regression.ipynb) is unfinished.
 + Decide on/implement a new way to store the scraped data. The current method is going to get messy incredibly quickly.
 + Use normalization in comparing players across years. Maybe add it in to the MVP predictions as well to prevent stat inflation bias. 
+    + Maybe use a "distance from the average" metric.
 + Rewrite Scrapers using pd.read_html() because it's just a better way to do things.
-  + Feel bad because I just discovered this 2 days ago.
-+ Add relevant team stats and award voting data to player data.
+    + Feel bad because I just discovered this 2 days ago.
++ Add relevant ~~team stats~~ and award voting data to player data.
 + Develop a single all-stat scraper that consolidates all stats when first scraped.
-
+    + Add in team stats before consolidating traded players. Use weighted average to give a rough estimate of how good the player's various teams are.
 ---
