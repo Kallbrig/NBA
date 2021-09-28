@@ -47,7 +47,6 @@ A repository to keep my NBA data and a few projects.
 ## To-do (No Order)
 
 + Update Documentation
-+ ~~Cluster Players using a ML algorithm~~ and interpret the results
 + ~~Scrape Team Per Game, Advanced,~~ and Shooting stats and consolidate them.
 + The [Team Linear Regression Notebook](https://github.com/Kallbrig/NBA/blob/main/ML%20-%20Team/team_linear_regression.ipynb) is unfinished.
 + Decide on/implement a new way to store the scraped data. The current method is going to get messy incredibly quickly.
@@ -74,5 +73,5 @@ A repository to keep my NBA data and a few projects.
 ## Completed
 + ~~Scrape award voting/winners.~~
 + ~~Add relevant team stats and award voting data to player data.~~
-
++ ~~Cluster Players using a ML algorithm and interpret the results~~
 ---
