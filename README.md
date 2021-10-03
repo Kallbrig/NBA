@@ -38,7 +38,9 @@ A repository to keep my NBA data and a few projects.
 
 ---
 ## In Progress
-+ Use normalization in comparing players across years. Maybe add it in to the MVP predictions as well to prevent stat inflation bias. 
++ Use normalization in comparing players across years. Maybe add it in to the MVP predictions as well to prevent stat
+  inflation bias.
+    +
     + ~~Using a "distance from the average" or "Off Average" metric~~
     + ~~Normalize for pace~~
     + Combine the two into a single dataset.
@@ -64,9 +66,12 @@ A repository to keep my NBA data and a few projects.
 + Test various regression algorithms to attempt to predict Award Winners.
 + Implement minimum/maximum requirements for SMOTY voting. The dataset currently contains all players, not just those that actually come off the bench.
 + Generate a dataset to predict MIP. In real life MIP is based on previous years' stats.
-  + Maybe subtract a player's previous year's stats from their present year's stats.
-    + For example (2020 PTS - 2019 PTS) = DIFF PTS, which could show generally, how much a player improved from 1 year to the next.
-  + Will most likely need to do away with team stats for the MIP datasets.
+    + Maybe subtract a player's previous year's stats from their present year's stats.
+        + For example (2020 PTS - 2019 PTS) = DIFF PTS, which could show generally, how much a player improved from 1
+          year to the next.
+    + Will most likely need to do away with team stats for the MIP datasets.
++ A bs4 based team stat scraper. It will be 10,000x faster than the selenium approach.
+    + Or just use pd.read_html because that's a thing I know about now.
     
 ---
 

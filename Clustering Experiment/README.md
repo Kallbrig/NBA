@@ -4,8 +4,9 @@ Uses KNeighborsClassifier to classify players into categories.
 
 ## The Results:
 
-+ I did 4 groups. The 4 groups seemed to be Good Players/Good Teams, Good Players/Bad Teams, Bad Players/Good Teams, Bad Players/Bad Teams.
-+ I thought it would use PG, SG, SF and F/C, but it classified a lot more onto team stats.
++ I did 4 groups. The 4 groups seemed to be Good Players/Good Teams, Good Players/Bad Teams, Bad Players/Good Teams, Bad
+  Players/Bad Teams.
++ I thought it would use PG, SG, SF and F/C, but it classified a lot more using team stats.
 
 ## Why I Did This:
 
