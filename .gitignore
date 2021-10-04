@@ -131,11 +131,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Project
-/Project/
 
-# Private Datasets
+
+# Private Datasets, notebooks, and subsets
+/Project/
 complete_players_with_award_voting.csv
 players_with_award_voting.csv
 Combining Data/Combining Player Data and Award Voters/Filling in zeros.ipynb
 Combining Data/Combining Player Data and Award Voters/Combining Player Data and Award Voting.ipynb
+/For Arteta/

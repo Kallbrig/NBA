@@ -1,6 +1,6 @@
 # Individual Award Winners
 
-+ This is where I use SkLearn ML algorithms to predict individual awards
++ This is where I store the results of the SkLearn ML algorithms that predict individual awards
 
 ---
 

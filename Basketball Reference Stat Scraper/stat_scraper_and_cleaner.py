@@ -1,12 +1,11 @@
-from bs4 import BeautifulSoup as bs
-import requests
-import pandas as pd
-from datetime import datetime
-from pprint import pprint
 import os
-from numpy import average
 from collections import namedtuple
+from datetime import datetime
 
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup as bs
+from numpy import average
 
 
 # Scrapes player stats from Basketball reference
@@ -43,8 +42,7 @@ def convert(dictionary):
     return namedtuple('GenericDict', dictionary.keys())(**dictionary)
 
 
-def clean_stats(path_to_scraped_stats:str, path_for_cleaned_stats:str):
-
+def clean_stats(path_to_scraped_stats: str, path_for_cleaned_stats: str):
     try:
         os.chdir(path_to_scraped_stats)
     except:
@@ -52,7 +50,7 @@ def clean_stats(path_to_scraped_stats:str, path_for_cleaned_stats:str):
 
     file_list = list(os.walk(os.getcwd()))[0][2]
 
-    # a MacOS issue.
+    # a MacOS workaround.
     try:
         file_list.remove('.DS_Store')
     except:
@@ -122,6 +120,21 @@ def clean_stats(path_to_scraped_stats:str, path_for_cleaned_stats:str):
                 # Sorts out all seasons by an individual player.
                 single_player = single_year[single_year.Player == i]
 
+                # The following line gets rid of the TOT Tm in the player's stats.
+                # this information is recalculated below
+                # The explanation for this is below.
+                single_player = single_player[single_year.Tm != 'TOT']
+
+                # NOTE: THE FOLLOWING INFORMATION IS CORRECT,
+                #   BUT
+                # I MISUNDERSTOOD HOW PLAYER'S TEAMS WERE BEING REPRESENTED.
+                # THIS DOESN'T NEED TO BE CALCULATED MANUALLY, but I still do it.
+                # IT'S ALREADY DONE UNDER THE "TOT" TEAM
+
+                # The reason I still calculate it manually is so that team stats can be added at this point. If i
+                # used the precalculated TOT stats, the player would not have a unique row for each team they played
+                # for.
+
                 #         """
                 #         The stats can be divided up into 3 categories:
                 #             Static Values are values that won't change regardless
@@ -188,6 +201,5 @@ def clean_stats(path_to_scraped_stats:str, path_for_cleaned_stats:str):
 
 
 if __name__ == '__main__':
-
     scrape_stats()
-    clean_stats('scraped_stats/','cleaned_stats/')
+    clean_stats('scraped_stats/', 'cleaned_stats/')
