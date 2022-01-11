@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/Basketball Reference Stat Scraper/cleaned_stats/1980.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Basketball Reference Stat Scraper/cleaned_stats/2003.csv">
           <value>
             <Attribute>
@@ -136,6 +143,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Basketball Reference Stat Scraper/scraped_stats/1980.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Basketball Reference Stat Scraper/scraped_stats/2003.csv">
           <value>
             <Attribute>
@@ -263,6 +277,27 @@
           </value>
         </entry>
         <entry key="/Basketball Reference Stat Scraper/scraped_stats/2021.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Basketball Reference Stat Scraper/scraped_stats/2022.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Clustering Experiment/three.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Combining Data/Combine Team Stats/league_stats.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -423,6 +458,48 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Data/Players With Award Data/complete_players_with_award_voting.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Players With Award Data/players_with_award_voting.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Team Data/By Year/1979_team_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Team Data/Combined/league_stats.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Feature Engineering/Checking Correlation/l.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Feature Engineering/Normalizing Data/normalized_for_pace.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Feature Engineering/Off Average Dataset Calculation/.ipynb_checkpoints/off_avg-checkpoint.csv">
           <value>
             <Attribute>
@@ -437,6 +514,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/For Arteta/combined.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/For Arteta/players_with_award_voting.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Project/Data/combined.csv">
           <value>
             <Attribute>
@@ -445,6 +536,34 @@
           </value>
         </entry>
         <entry key="/Project/Data/players.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Project/Data/unique_index_combined.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Project/Data/unique_index_players.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Project/complete_unique_index.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Project/consolidated_unique_index.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

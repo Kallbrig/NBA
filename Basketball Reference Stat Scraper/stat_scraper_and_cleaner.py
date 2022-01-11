@@ -129,11 +129,12 @@ def clean_stats(path_to_scraped_stats: str, path_for_cleaned_stats: str):
                 #   BUT
                 # I MISUNDERSTOOD HOW PLAYER'S TEAMS WERE BEING REPRESENTED.
                 # THIS DOESN'T NEED TO BE CALCULATED MANUALLY, but I still do it.
-                # IT'S ALREADY DONE UNDER THE "TOT" TEAM
 
                 # The reason I still calculate it manually is so that team stats can be added at this point. If i
                 # used the precalculated TOT stats, the player would not have a unique row for each team they played
                 # for.
+
+                # Team Stats need to be scraped and added here. It's a to-do.
 
                 #         """
                 #         The stats can be divided up into 3 categories:
