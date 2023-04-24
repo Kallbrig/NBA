@@ -1,0 +1,33 @@
+  ,name                  ,abbreviation,single_word_name
+0 ,Boston Celtics        ,BOS         ,boston-celtics
+1 ,Brooklyn Nets         ,BKN         ,brooklyn-nets
+2 ,New York Knicks       ,NYK         ,new-york-knicks
+3 ,Philadelphia 76ers    ,PHI         ,philadelphia-76ers
+4 ,Toronto Raptors       ,TOR         ,toronto-raptors
+5 ,Golden State Warriors ,GSW         ,golden-state-warriors
+6 ,Los Angeles Clippers  ,LAC         ,los-angeles-clippers
+7 ,Los Angeles Lakers    ,LAL         ,los-angeles-lakers
+8 ,Phoenix Suns          ,PHX         ,phoenix-suns
+9 ,Sacramento Kings      ,SAC         ,sacramento-kings
+10,Chicago Bulls         ,CHI         ,chicago-bulls
+11,Cleveland Cavaliers   ,CLE         ,cleveland-cavaliers
+12,Detroit Pistons       ,DET         ,detroit-pistons
+13,Indiana Pacers        ,IND         ,indiana-pacers
+14,Milwaukee Bucks       ,MIL         ,milwaukee-bucks
+15,Dallas Mavericks      ,DAL         ,dallas-mavericks
+16,Houston Rockets       ,HOU         ,houston-rockets
+17,Memphis Grizzlies     ,MEM         ,memphis-grizzlies
+18,New Orleans Hornets   ,NOP         ,new-orleans-hornets
+19,San Antonio Spurs     ,SAS         ,san-antonio-spurs
+20,Atlanta Hawks         ,ATL         ,atlanta-hawks
+21,Charlotte Bobcats     ,CHA         ,charlotte-bobcats
+22,Miami Heat            ,MIA         ,miami-heat
+23,Orlando Magic         ,ORL         ,orlando-magic
+24,Washington Wizards    ,WSH         ,washington-wizards
+25,Denver Nuggets        ,DEN         ,denver-nuggets
+26,Minnesota Timberwolves,MIN         ,minnesota-timberwolves
+27,Oklahoma City Thunder ,OKC         ,oklahoma-city-thunder
+28,Portland Trail Blazers,POR         ,portland-trail-blazers
+29,Utah Jazz             ,UTA         ,utah-jazz
+30,Seattle Supersonics   ,SEA         ,seattle-supersonics
+31,New Jersey Nets       ,NJN         ,new-jersey-nets

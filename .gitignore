@@ -140,5 +140,6 @@ players_with_award_voting.csv
 Combining Data/Combining Player Data and Award Voters/Filling in zeros.ipynb
 Combining Data/Combining Player Data and Award Voters/Combining Player Data and Award Voting.ipynb
 /For Arteta/
-/ML - Regression/Automated Regression Emails/credentials.py
 /ML - Regression/Models/
+/Emailer/credentials.py
+/Champ Prediction/training_set_team.csv

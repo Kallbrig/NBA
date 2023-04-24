@@ -3,7 +3,70 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/Basketball Reference Stat Scraper/Awards/2022_MVP.csv">
+        <entry key="/0. Archive/Clustering Experiment/four.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/0. Archive/Clustering Experiment/one.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/0. Archive/Clustering Experiment/three.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/0. Archive/Clustering Experiment/two.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/0. Archive/Clustering Experiment/zero.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/0. Archive/Feature Engineering/Checking Correlation/l.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Basketball Reference Stat Scraper/Awards/MVP/1980_MVP.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Basketball Reference Stat Scraper/Awards/MVP/1994_MVP.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Basketball Reference Stat Scraper/Awards/MVP/1995_MVP.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Basketball Reference Stat Scraper/Awards/MVP/2022_MVP.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -1865,6 +1928,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Basketball Reference Stat Scraper/team_stats/2023_tm_stats.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Basketball Reference Stat Scraper/team_stats/all.csv">
           <value>
             <Attribute>
@@ -2384,6 +2454,27 @@
           </value>
         </entry>
         <entry key="/Basketball Reference Stat Scraper/team_stats/pre_1980/all_pre_1980.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Champ Prediction/Team Mappings.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Champ Prediction/champions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Champ Prediction/runnerups.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -3469,6 +3560,13 @@
           </value>
         </entry>
         <entry key="/ML - Regression/Historic Predictions/2023/20230130_MVP_Predictions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/ML - Regression/Historic Predictions/2023/20230323_MVP_Predictions.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

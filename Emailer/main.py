@@ -3,51 +3,54 @@ import time
 from datetime import datetime
 
 import joblib
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from send_email import *
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from sklearn.preprocessing import MinMaxScaler
 
-plt.rcParams['savefig.dpi'] = 200
+from send_email import *
+from generate_graphs import gen_todays_graph
 
-sns.set_style('whitegrid')
+
+# plt.rcParams['savefig.dpi'] = 200
+#
+# sns.set_style('whitegrid')
 
 
 def trim_set(frame):
     return frame[((frame['TRB'] > 2) | (frame['AST'] > 5)) & (frame['PTS'] > 15)]
 
 
-all_files = [i for i in os.listdir(f'../Historic Predictions/{date.today().year}')]
+all_files = [i for i in os.listdir(f'../ML - Regression/Historic Predictions/{date.today().year}')]
 
 li = []
 
 for filename in all_files:
-    df = pd.read_csv(f'../Historic Predictions/{date.today().year}/{filename}', index_col=None, )
+    df = pd.read_csv(f'../ML - Regression/Historic Predictions/{date.today().year}/{filename}', index_col=None, )
     df['Date'] = filename[:8]
     df['Date'] = pd.to_datetime(df['Date'])
     li.append(df)
 
 frame = pd.concat(li, axis=0, ignore_index=True, )
 
-players_to_graph = frame.loc[(frame['Date'] == frame.Date.max()) & (frame['pred_rank'] <= 5), 'Player'].tolist()
-filtered_frame = frame[frame['Player'].isin(players_to_graph)]
-sns.lineplot(data=filtered_frame, x='Date', y='pred', hue='Player', marker='o')
-plt.xticks(rotation=45)
+# players_to_graph = frame.loc[(frame['Date'] == frame.Date.max()) & (frame['pred_rank'] <= 5), 'Player'].tolist()
+# filtered_frame = frame[frame['Player'].isin(players_to_graph)]
+# sns.lineplot(data=filtered_frame, x='Date', y='pred', hue='Player', marker='o')
+# plt.xticks(rotation=45)
+#
+# plt.yticks([i / 100 for i in range(0, 101, 5)])
+#
+# plt.legend(bbox_to_anchor=(1, 1))
+#
+# plt.tight_layout()
+# #
+# # plt.savefig(
+# #     f'../ML - Regression/Historic Predictions/Graphs/{date.today().year}/{filtered_frame.Date.max().strftime("%Y%m%d")}.png',
+# #     dpi=500)
+# gen_todays_graph()
+# time.sleep(5)
 
-plt.yticks([i / 100 for i in range(0, 101, 5)])
-
-plt.legend(bbox_to_anchor=(1, 1))
-
-plt.tight_layout()
-
-plt.savefig(f'../Historic Predictions/Graphs/{date.today().year}/{filtered_frame.Date.max().strftime("%Y%m%d")}.png',
-            dpi=500)
-
-time.sleep(2)
-
-rf_regressor_trained = joblib.load("../models/RandomForrestRegressor.pkl", )
+rf_regressor_trained = joblib.load("../ML - Regression/models/MVP_Predictions.pkl", )
 
 test_set = pd.read_csv(
     f'/Users/chaseallbright/Dropbox/NBA/Data/Test Sets/{datetime.now().strftime("%Y")}/{datetime.now().strftime("%Y%m%d")}_player_stats.csv',
@@ -74,11 +77,11 @@ saved = test_set.sort_values('pred_rank', ascending=True).head(10)[
     ['pred_rank', 'Player', 'G', 'PTS', 'TS%', 'AST', 'TRB', 'STL', 'BLK', 'OWS', 'DWS', 'WS/48', 'BPM',
      'pred']].set_index('pred_rank')
 
-if not os.path.isdir(f'../Historic Predictions/{datetime.now().strftime("%Y")}'):
-    os.mkdir(f'../Historic Predictions/{datetime.now().strftime("%Y")}')
+if not os.path.isdir(f'../ML - Regression/Historic Predictions/{datetime.now().strftime("%Y")}'):
+    os.mkdir(f'../ML - Regression/Historic Predictions/{datetime.now().strftime("%Y")}')
 
 saved.to_csv(
-    f'../Historic Predictions/{datetime.now().strftime("%Y")}/{datetime.now().strftime("%Y%m%d")}_MVP_Predictions.csv')
+    f'../ML - Regression/Historic Predictions/{datetime.now().strftime("%Y")}/{datetime.now().strftime("%Y%m%d")}_MVP_Predictions.csv')
 # print(test_set.sort_values('pred_rank', ascending=True).head(10)[
 #           ['pred_rank', 'Player', 'G', 'PTS', 'TS%', 'AST', 'TRB', 'STL', 'BLK','OWS','DWS', 'WS/48','BPM', 'pred']])
 
@@ -94,8 +97,10 @@ saved.columns = ['Predicted Vote Share' if i == 'pred' else i for i in saved.col
 
 html_table = saved.to_html()
 
+gen_todays_graph()
+time.sleep(5)
 img_html = get_img_to_html(
-    f'../Historic Predictions/Graphs/{date.today().year}/{datetime.now().strftime("%Y%m%d")}.png')
-
+    f'../ML - Regression/Historic Predictions/Graphs/{date.today().year}/{datetime.now().strftime("%Y%m%d")}.png')
+time.sleep(1)
 email_text = format_email(html_table, img_html)
 send_email(email_text)
