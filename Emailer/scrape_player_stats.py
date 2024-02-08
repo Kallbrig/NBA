@@ -4,6 +4,7 @@ from datetime import datetime
 
 import pandas as pd
 import requests
+from io import StringIO
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -49,8 +50,8 @@ def fetch_player_stats_single_year(year: int):
         per_game_data = get_html_text_selenium(f'https://www.basketball-reference.com/leagues/NBA_{year}_per_game.html')
         adv_data = get_html_text_selenium(f'https://www.basketball-reference.com/leagues/NBA_{year}_advanced.html')
 
-    df = pd.read_html(per_game_data)[0]
-    df_adv = pd.read_html(adv_data)[0]
+    df = pd.read_html(StringIO(per_game_data))[0]
+    df_adv = pd.read_html(StringIO(adv_data))[0]
 
     df = df.drop(df[df['Player'] == 'Player'].index)
 
@@ -86,13 +87,13 @@ def fetch_player_stats_single_year(year: int):
     # Adds a year column
     new['Year'] = year
 
-    if year == datetime.now().strftime('%Y'):
-        if not os.path.isdir(f'../Data/Test Sets/{datetime.now().strftime("%Y")}'):
-            os.mkdir(f'../Data/Test Sets/{datetime.now().strftime("%Y")}')
+    # if year == datetime.now().strftime('%Y'):
+    if not os.path.isdir(f'../Data/Test Sets/{year}'):
+        os.mkdir(f'../Data/Test Sets/{year}')
 
-        new.to_csv(
-            f'../Data/Test Sets/{datetime.now().strftime("%Y")}/{datetime.now().strftime("%Y%m%d")}_player_stats.csv')
-        print(datetime.now().strftime("%m/%d/%Y"), 'Complete')
+    new.to_csv(
+        f'../Data/Test Sets/{year}/{datetime.now().strftime("%Y%m%d")}_player_stats.csv', index=False)
+    print(f'{year} data saved on {datetime.now().strftime("%m/%d/%Y")}')
 
     new.to_csv(f'../Basketball Reference Stat Scraper/player_stats/{year}_player_stats.csv')
 
@@ -100,13 +101,12 @@ def fetch_player_stats_single_year(year: int):
 
 
 def fetch_current_years_stats():
-    # New NBA season starts in October (10)
-    if datetime.now().month >= 10:
-        year = datetime.now().year + 1
-    else:
-        year = datetime.now().year
+    current_month = datetime.now().month
+    current_year = datetime.now().year
+    nba_season_year = current_year if current_month < 10 else current_year + 1
 
-    fetch_player_stats_single_year(year)
+    print(f"Current NBA Season Year: {nba_season_year}")  # Debug print
+    fetch_player_stats_single_year(nba_season_year)
 
 
 if __name__ == '__main__':

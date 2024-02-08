@@ -13,8 +13,11 @@ def trim_set(frame):
 rf_regressor_trained = joblib.load("models/RandomForrestRegressor.pkl", )
 
 test_set = pd.read_csv(
-    f'/Users/chaseallbright/Dropbox/NBA/Data/Test Sets/{datetime.now().strftime("%Y")}/{datetime.now().strftime("%Y%m%d")}_player_stats.csv',
+    f'/Users/chaseallbright/SynologyDrive/Synology Drive/NBA/Data/Test Sets/{2024}/{datetime.now().strftime("%Y%m%d")}_player_stats.csv',
     index_col=0)
+
+test_set.reset_index(inplace=True)
+
 test_set = trim_set(test_set)
 
 feature_list = ['Age', 'G', 'GS', 'MP', 'FG', 'FGA',
