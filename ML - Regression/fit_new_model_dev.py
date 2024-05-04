@@ -1,19 +1,19 @@
+import logging
 import os
+from datetime import datetime
 
+import joblib
+import matplotlib
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.feature_selection import SelectPercentile
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
-import joblib
-import logging
-from datetime import datetime
 
-from utility_functions import trim_set
 from team_mappings import team_mapping
+from utility_functions import trim_set
 
-import matplotlib
-matplotlib.use('TkAgg')
+matplotlib.use('Agg')
 
 import matplotlib.pyplot as plt
 

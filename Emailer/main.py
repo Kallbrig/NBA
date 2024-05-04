@@ -1,30 +1,29 @@
-from send_email import *
-
 import os
 from datetime import datetime
+
 import joblib
+import matplotlib
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
 
-from send_email import send_email
 from generate_graphs import gen_todays_graph
-from utility_functions import get_nba_season_year
 from scrape_player_stats import fetch_current_years_stats
+from send_email import *
+from send_email import send_email
 from team_mappings import team_mapping
-import seaborn as sns
-import matplotlib.pyplot as plt
+from utility_functions import get_nba_season_year
 
-import matplotlib
-
-matplotlib.use('TKAGG')
+matplotlib.use('Agg')
 
 
 
 
 def plot_top_players_bar_chart(data):
-    print("Data type:", type(data))
-    print("Data columns:", data.columns)
-    print("Data shape:", data.shape)
+    # print("Data type:", type(data))
+    # print("Data columns:", data.columns)
+    # print("Data shape:", data.shape)
 
     sns.set_style('whitegrid')
     sns.set_palette('deep')
@@ -38,7 +37,6 @@ def plot_top_players_bar_chart(data):
 
     plt.title('Top 10 NBA MVP Candidates')
     plt.tight_layout()
-    plt.show()
 
 
 
@@ -79,7 +77,7 @@ def prepare_and_save_predictions(test_set):
                     ]
 
     # rf_regressor_trained = joblib.load("../ML - Regression/models/MVP_Predictions.pkl")
-    rf_regressor_trained = joblib.load(f"../Models/MVP/{get_nba_season_year()}/MVP_Predictions_V2_20240105.pkl")
+    rf_regressor_trained = joblib.load(f"../Models/MVP/{get_nba_season_year()}/MVP_Predictions_V2_20240504.pkl")
     x_test = test_set[feature_list]
     y_pred = rf_regressor_trained.predict(x_test)
 
