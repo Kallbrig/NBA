@@ -134,14 +134,16 @@
 #
 #
 import os
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from datetime import date
-from utility_functions import get_nba_season_year
-import matplotlib
 
-matplotlib.use('TKAgg')
+import matplotlib
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+
+from utility_functions import get_nba_season_year
+
+matplotlib.use('Agg')
 
 
 def load_and_concatenate_files(directory):
