@@ -6,6 +6,7 @@ data_dir - Required so that if the file already exists, it won't be pulled again
 """
 
 import os
+from datetime import datetime
 from time import sleep
 
 import pandas as pd
@@ -43,7 +44,13 @@ def scrape_single_year_mvp(year: int, data_dir: str):
 if __name__ == '__main__':
     working_dir = 'MVP'
     print(working_dir)
-    for year in range(1980, 2024):
+
+    # Ensures that we aren't pulling voting before the season ends. We pull beginning the first of June
+    current_month = datetime.now().month
+    current_year = datetime.now().year
+    nba_season_year = current_year if current_month < 5 else current_year - 1
+
+    for year in range(1980, nba_season_year + 1):
         df = scrape_single_year_mvp(year, working_dir)
         df = df.loc[:, ['Player', 'Age', 'Tm', 'First', 'Pts Won', 'Pts Max', 'Share', 'Year']]
         df.to_csv(os.path.join(working_dir, f'{year}_MVP.csv'))
